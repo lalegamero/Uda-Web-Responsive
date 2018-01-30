@@ -1,0 +1,161 @@
+/*
+ *
+ * Responsive style
+ * 
+ */
+
+ .content {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 500px) {
+  .header {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #800000;
+    border-bottom: 1px solid #670000;
+  }
+  .header_burger {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    padding: 1.5em;
+  }
+  .header_burger .fa {
+    color: #f2f2f2;
+  }
+  .header__logo {
+    height: 45px;
+    margin: 5px;
+  }
+  .header__title {
+    font-weight: 600;
+    font-size: 2em;
+    margin-top: 15px;
+    color: #f2f2f2;
+  }
+  .nav {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: translate(-300px, 0);
+    -webkit-transform: translate(-300px, 0);
+    transition: transform 0.7s ease;
+  }
+  .nav.open {
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    z-index: 1;
+    background-color: #323232;
+  }
+  .nav__item {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid white;
+  }
+  .nav a {
+    color: #f2f2f2;
+  }
+  .main {
+    border-top: 1px solid #000000;
+  }
+  .hero article {
+    height: 20%;
+  }
+  .description h2 {
+    text-align: center;
+  }
+  .description p {
+    display: none;
+  }
+  .scores {
+    width: 100%;
+  }
+  footer {
+    padding: 1.5em;
+  }
+  footer li {
+    margin: 0 0.5em;
+  }
+}
+
+@media screen and (min-width: 501px) {
+  .header {
+    background-color: #800000;
+    border-bottom: 1px solid #670000;
+  }
+  .header__logo {
+    height: 65px;
+    margin: 15px;
+  }
+  .header__title {
+    font-size: 3em;
+    color: #f2f2f2;
+  }
+  .nav a {
+    font-size: 1.3em;
+  }
+  .hero {
+    width: 100%;
+    order: -3;
+  }
+  .hero article {
+    height: 30%;
+  }
+  .top-news {
+    width: 50%;
+    order: -2;
+  }
+  .weather {
+    width: 50%;
+    order: -1;
+  }
+  .scores {
+    width: 100%;
+  }
+  .recent-news {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  main, .header, .header#top__box, .nav, .content {
+    width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+}
+  .header {
+    background-color: #800000;
+    border-bottom: 1px solid #670000;
+  }
+  .nav a {
+    font-size: 1em;
+  }
+  .nav__item a:hover {
+    background-color: #800000;
+    opacity: 0.8;
+    border-radius: 5px;
+    color: #ffffff;
+  }
+  .top-news {
+    width: 50%;
+    order: 1;
+  }
+  .weather {
+    width: 50%;
+    order: 2;
+  }
+  .scores {
+    width: 100%;
+    order: -1;
+  }
+  .recent-news {
+    width: 100%;
+    order: 3;
+  }
+  footer li:hover {
+    background-color: red;
+    opacity: 0.8;
+    border-radius: 3px;
+  }
+}
